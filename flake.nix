@@ -6,10 +6,10 @@
     flake-schemas.url = github:gvolpe/flake-schemas;
     flake-utils.url = github:numtide/flake-utils;
 
-    neovim-nightly-overlay = {
-      url = "github:nix-community/neovim-nightly-overlay";
-      # inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # neovim-nightly-overlay = {
+    #   url = "github:nix-community/neovim-nightly-overlay";
+    #   # inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     # nix lsp support
     nixd.url = github:nix-community/nixd;
@@ -414,9 +414,9 @@
           };
         };
 
-        neovimOverlay = f: p: {
-          neovim-nightly = inputs.neovim-nightly-overlay.packages.${system}.neovim;
-        };
+        # neovimOverlay = f: p: {
+        #   neovim-nightly = inputs.neovim-nightly-overlay.packages.${system}.neovim;
+        # };
 
         nixdOverlay = f: p: {
           inherit (inputs.nixd.packages.${system}) nixd;
