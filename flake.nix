@@ -425,7 +425,8 @@
         pkgs = import nixpkgs {
           inherit system;
           config = { allowUnfree = true; };
-          overlays = [ libOverlay pluginOverlay metalsOverlay neovimOverlay nmdOverlay nixdOverlay tsOverlay ];
+          # overlays = [ libOverlay pluginOverlay metalsOverlay neovimOverlay nmdOverlay nixdOverlay tsOverlay ];
+          overlays = [ libOverlay pluginOverlay metalsOverlay nmdOverlay nixdOverlay tsOverlay ];
         };
 
         default-ide = pkgs.callPackage ./lib/ide.nix {
