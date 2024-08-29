@@ -30,7 +30,8 @@ in
   };
 
   config = mkIf cfg.enable {
-    vim.startPlugins = [ pkgs.neovimPlugins.mind-nvim ];
+    # vim.startPlugins = [ pkgs.neovimPlugins.mind-nvim ];
+    vim.startPlugins = [ ];
 
     vim.nnoremap = {
       "<leader>mo" = "<cmd> MindOpenMain<CR>";

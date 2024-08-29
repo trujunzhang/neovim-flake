@@ -337,11 +337,11 @@
     };
 
     # Organized notes in trees
-    mind-nvim = {
-      url = github:gvolpe/mind.nvim;
-      #url = github:phaazon/mind.nvim;
-      flake = false;
-    };
+    # mind-nvim = {
+    #   url = github:gvolpe/mind.nvim;
+    #   #url = github:phaazon/mind.nvim;
+    #   flake = false;
+    # };
 
     # Plant UML syntax highlights
     vim-plantuml = {
