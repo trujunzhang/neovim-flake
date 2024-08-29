@@ -15,7 +15,7 @@
     nixd.url = github:nix-community/nixd;
 
     # Nix module docs generator
-    nmd.url = github:gvolpe/nmd;
+    # nmd.url = github:gvolpe/nmd;
     #nmd.url = git+file:///home/gvolpe/workspace/nmd;
 
     tree-sitter-scala = {
@@ -385,8 +385,8 @@
               "self"
               "nixpkgs"
               "flake-utils"
-              "neovim-nightly-flake"
-              "nmd"
+              # "neovim-nightly-flake"
+              # "nmd"
               "nixd"
               "tree-sitter-scala"
             ];
@@ -398,7 +398,7 @@
         inherit (lib) metalsBuilder metalsOverlay neovimBuilder;
 
         pluginOverlay = lib.buildPluginOverlay;
-        nmdOverlay = inputs.nmd.overlays.default;
+        # nmdOverlay = inputs.nmd.overlays.default;
 
         libOverlay = f: p: {
           lib = p.lib.extend (_: _: {
@@ -426,7 +426,7 @@
           inherit system;
           config = { allowUnfree = true; };
           # overlays = [ libOverlay pluginOverlay metalsOverlay neovimOverlay nmdOverlay nixdOverlay tsOverlay ];
-          overlays = [ libOverlay pluginOverlay metalsOverlay nmdOverlay nixdOverlay tsOverlay ];
+          overlays = [ libOverlay pluginOverlay metalsOverlay nixdOverlay tsOverlay ];
         };
 
         default-ide = pkgs.callPackage ./lib/ide.nix {
